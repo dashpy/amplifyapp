@@ -28,9 +28,112 @@
 .custom-content{
   width: 20rem;
   margin-top:1em;
+  margin-bottom:1em;
   width: 100%
 }
 
 .bold{
   font-weight: bold;
+}
+
+.footer{
+  height: 5em;
+  text-align: center;
+  color: darkgray;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  width: 100%;
+}
+
+.paragraph-without-margin-bottom{
+  margin-bottom: 0;
+}
+
+.underline{
+  text-decoration: underline;
+}
+
+.long{
+  width: 100%
+}
+
+.custom-card-position{
+  max-width: 30em;
+  margin-top:2em;
+}
+
+.custom-card-image{
+  border-radius: 6em;
+  margin-top:2em;
+  margin-left:1em;
+}
+
+.hide-on-low-resolution{
+  display: none;
+}
+
+.hide-on-hight-resolution{
+  display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .hide-on-hight-resolution{
+    display: block;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .hide-on-low-resolution{
+    display: block;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .hide-on-low-resolution{
+    display: block;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .hide-on-low-resolution{
+    display: block;
+  }
+}
+
+.anchor{
+  float: right;
+  color: #007bff !important;
+  cursor: pointer;
+}
+
+.background-custom{
+    margin-top: 2em;
+    margin-left: 1em;
+    height: 10em;
+    border-radius: 6em;
+
+}
+
+.cursor-pointer{
+  cursor: pointer;
+}
+
+.card {
+        margin: 0 auto; /* Added */
+        float: none; /* Added */
+        margin-bottom: 10px; /* Added */
+        margin-top:1em;
+}
+.card:hover {
+  box-shadow: 0 18px 16px 0 rgba(0,0,0,0.2);
 }

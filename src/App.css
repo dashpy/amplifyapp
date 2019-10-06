@@ -35,17 +35,8 @@
 .bold{
   font-weight: bold;
 }
+ 
 
-.footer{
-  height: 5em;
-  text-align: center;
-  color: darkgray;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  padding: 1rem;
-  width: 100%;
-}
 
 .paragraph-without-margin-bottom{
   margin-bottom: 0;
@@ -60,7 +51,6 @@
 }
 
 .custom-card-position{
-  max-width: 30em;
   margin-top:2em;
 }
 
@@ -82,6 +72,7 @@
   .hide-on-hight-resolution{
     display: block;
   }
+
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -101,12 +92,18 @@
   .hide-on-low-resolution{
     display: block;
   }
+  .custom-card-position{
+    max-width: 30em;
+  }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
   .hide-on-low-resolution{
     display: block;
+  }
+  .custom-card-position{
+    max-width: 30em;
   }
 }
 

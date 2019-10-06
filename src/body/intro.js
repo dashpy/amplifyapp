@@ -16,7 +16,7 @@ class Intro extends Component {
     return (
       <div className="row">
 
-      <div className="col-sm-4">
+      <div className="col-md-4">
         <div className="card mb-3 custom-content custom-card-position" >
           <div className="row no-gutters">
             <div className="col-md-4 hide-on-low-resolution">

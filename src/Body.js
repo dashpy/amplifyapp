@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Intro from './body/intro';
 import Work from './body/work';
+import Entry from './body/entry';
 import Background from './body/background';
 import About from './About';
 
@@ -11,15 +12,21 @@ class Body extends Component {
         sections:[
           'main',
           'showAbout',
-          'showBackground',
+          'entry',
         ],
-        sectionSelected:0
+        sectionSelected:0,
+        entryId:0
     };
   }
 
-  changeSection = (sectionId) => {
-    let index = this.state.sections.indexOf(sectionId);
-    this.setState({'sectionSelected':index});
+  changeSection = (sectionName,entryId) => {
+    let index = this.state.sections.indexOf(sectionName);
+
+    if(sectionName === 'entry'){
+      this.setState({'entryId':entryId,'sectionSelected':index});
+    }else{
+      this.setState({'sectionSelected':index});
+    }
   }
 
   goMain = () =>{
@@ -36,9 +43,11 @@ class Body extends Component {
           {(()=> {
             switch (this.state.sectionSelected) {
               case 0:
-                return <Main onChange={this.changeSection}/>;
+                return <Main onChange={this.changeSection} />;
               case 1:
                 return <About onChange={this.changeSection}/>;
+              case 2:
+                return <Entry onChange={this.changeSection} entryId={this.state.entryId}/>;
               default:
                 return <Main onChange={this.changeSection}/>;
             }
@@ -55,15 +64,15 @@ class Main extends Component {
     this.changeSection = props.onChange;
   }
 
-  changeContent = (section) => {
-    this.changeSection(section);
+  changeContent = (section,id) => {
+    this.changeSection(section,id);
   }
 
   render() {
     return (
       <div className="container-fluid">
         <Intro onChange={this.changeContent}/>
-        <Work/>
+        <Work onChange={this.changeContent}/>
         <Background onChange={this.changeContent}/>
       </div>
     );

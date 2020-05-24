@@ -4,7 +4,7 @@ import Work from './body/work';
 import Entry from './body/entry';
 import Background from './body/background';
 import About from './About';
-import About from './Header';
+import Header from './Header';
 
 class Body extends Component {
   constructor(props) {

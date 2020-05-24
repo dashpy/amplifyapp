@@ -4,6 +4,7 @@ import Work from './body/work';
 import Entry from './body/entry';
 import Background from './body/background';
 import About from './About';
+import About from './Header';
 
 class Body extends Component {
   constructor(props) {
@@ -71,6 +72,7 @@ class Main extends Component {
   render() {
     return (
       <div className="container-fluid">
+        <Header/>
         <Intro onChange={this.changeContent}/>
         <Work onChange={this.changeContent}/>
         <Background onChange={this.changeContent}/>
